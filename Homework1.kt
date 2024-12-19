@@ -17,7 +17,7 @@ fun main() {
     //переворот строки
     println("Введите строку:")
     val line = readln()
-    val invertedLine = reversed(line)
+    val invertedLine = invertedLine(line)
     println("Ваша строка в обратном порядке - $invertedLine")
 }
 
@@ -41,6 +41,6 @@ fun checkPrimeNumber(number: Int): Boolean {
     return true
 }
 
-fun reversed(line: String): String{
+fun invertedLine(line: String): String{
     return line.reversed()
 }
