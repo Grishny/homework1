@@ -8,7 +8,7 @@ fun main() {
     //проверка простоты числа, есть вопрос: как указать, что 1 является исключением?
     println("Введите число:")
     val number = readln().toInt()
-    if (primeNumber(number)) {
+    if (checkPrimeNumber(number)) {
         println("$number — простое число.")
     } else {
         println("$number — составное число.")
@@ -17,19 +17,19 @@ fun main() {
     //переворот строки
     println("Введите строку:")
     val line = readln()
-    val reversed = reversed(line)
-    println("Ваша строка в обратном порядке - $reversed")
+    val invertedLine = reversed(line)
+    println("Ваша строка в обратном порядке - $invertedLine")
 }
 
 fun factorial(value: Int): Int {
     var product = 1
     for (number in 1..value) {
-        product *= value
+        product *= number
     }
     return product
 }
 
-fun primeNumber(number: Int): Boolean {
+fun checkPrimeNumber(number: Int): Boolean {
     if (number <= 1) {
         return false
     }
